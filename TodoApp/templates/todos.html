@@ -1,0 +1,41 @@
+{% include 'layout.html' %}
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-header">
+                I tuoi Todos
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    Lista dei tuoi todos
+                </h5>
+                <p class="card-text">
+                    Qui puoi vedere tutti i tuoi todos
+                </p>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Info</th>
+                            <th scope="col">Azioni</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for todo in todos %}
+                        {% if todo.completed == False %}
+                            <tr class="pointer alert alert-success">
+                                <td>{{loop.index}}</td>
+                                <td class="strike-throught-td">{{todo.title}}</td>
+                                <td>
+                                    <a href="/todos/edit-todo-page/{{todo.id}}" class="btn btn-primary">Modifica</a>
+                                </td>
+                            </tr>
+                        {% endif %}
+                        {% endfor %}
+                        <a href="/todos/todo-create-page" class="btn btn-primary">Aggiungi</a>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    

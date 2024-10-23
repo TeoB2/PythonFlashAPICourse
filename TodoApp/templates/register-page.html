@@ -1,0 +1,57 @@
+{% include 'layout.html' %}
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Registrazione
+            </div>
+            <div class="card-body">
+                <form id="registerForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Inserisci la tua email" autocomplete="email" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Inserisci il tuo username" autocomplete="username" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="first_name">Nome</label>
+                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Inserisci il tuo nome" autocomplete="first_name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="last_name">Cognome</label>
+                            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Inserisci il tuo nome" autocomplete="last_name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="role">Ruolo</label>
+                            <input type="text" class="form-control" id="role" name="role" placeholder="Inserisci il tuo ruolo" autocomplete="role" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="phone">Numero telefono</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Inserisci il tuo numero" autocomplete="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Inserisci la password" autocomplete="none" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="confirm_password">Conferma password</label>
+                            <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Inserisci conferma password" autocomplete="none" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrati</button>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href="/auth/login-page">Hai un account? Fai il login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
